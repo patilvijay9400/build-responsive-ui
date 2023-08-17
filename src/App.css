@@ -3,3 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+.sign-btns .rounded-left {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.sign-btns .rounded-right {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.sign-btns button:hover {
+  background-color: aqua;
+}
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.banner-slider img.active {
+  opacity: 1;
+}
