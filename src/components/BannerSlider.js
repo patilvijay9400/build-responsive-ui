@@ -18,7 +18,7 @@ const BannerSlider = ({ data }) => {
         <div className="col-6 position-relative info h-100">
         {data.map((item, index) => (
             <div key={index} className={index === currentIndex ? "active" : ""}>
-              <h4>{item.subTitle}</h4>
+              <h5 className="text-primary">{item.subTitle}</h5>
               <h1 className="display-4 fw-bold pb-3">{item.title}</h1>
               <button type="button" className="btn btn-outline-primary btn-lg">View More</button>
             </div>

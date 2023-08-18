@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import MapModal from "./MapModal";
 
 const Header = () => {
+  const [mapOpen, setMapOpen] = useState(false);
+  const [mapContent, setMapContent] = useState("");
+
+  const openMap = (content) => {
+    setMapOpen(true);
+    setMapContent(content);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg primary-bg">
       <div className="container">
@@ -46,7 +55,9 @@ const Header = () => {
             <button type="button" className="px-4 py-2 btn btn-outline-light rounded-right ms-1">
               Sign Up
             </button>
+            <button className="btn primary-bg text-white py-2 ms-1 ms-md-3" onClick={() => openMap("map Content")}><i class='bx bx-current-location'></i></button>
           </div>
+          <MapModal mapOpens={mapOpen}>{mapContent}</MapModal>
         </div>
       </div>
     </nav>

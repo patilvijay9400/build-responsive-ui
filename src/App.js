@@ -9,12 +9,6 @@ import { BannerData } from "./data/BannerData";
 import { TabContent } from "./data/TabContent";
 
 function App() {
-  // const images = [
-  //   "image1.jpg",
-  //   "image2.jpg",
-  //   "image3.jpg",
-  //   // Add more image URLs here
-  // ].map((image) => process.env.PUBLIC_URL + image);
 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
