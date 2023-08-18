@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.sign-btns button{
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 .sign-btns .rounded-left {
   border-radius: 0.5rem 0 0 0.5rem;
@@ -10,12 +16,11 @@
   border-radius: 0 0.5rem 0.5rem 0;
 }
 .sign-btns button:hover {
-  background-color: aqua;
+  background-color: #ffffff;
+  color: #5575EF;
 }
 .banner-slider {
   position: relative;
-  width: 100%;
-  height: 300px;
   overflow: hidden;
 }
 
@@ -30,6 +35,86 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.banner-slider img.active {
+.banner-slider .info div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8rem 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.banner-slider img.active,
+.banner-slider .info div.active {
+  position: relative;
   opacity: 1;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000080;
+}
+.modal-content {
+  width: 50%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.tab-container .tab {
+  cursor: pointer;
+}
+.tab-container .tab:hover{
+  background-color: #5575EF;
+  color: #ffffff;
+}
+.video-content {
+  height: 60vh;
+}
+.bx{
+  font-size: 1.5rem;
+}
+.primary-bg{
+  background-color: #5575EF !important;
+}
+.btn-outline-light:hover{
+  color: #5575EF;
+}
+.btn-outline-primary{
+  color: #5575EF;
+  border-color: #5575EF;
+}
+.btn-outline-primary:hover{
+  color: #ffffff;
+  background-color: #5575EF;
+}
+.text-primary{
+  color: #5575EF;
+}
+
+.map-container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.555);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .modal-content {
+    overflow-y: auto;
+    width: 95%;
+    height: 90vh;
+  }
 }

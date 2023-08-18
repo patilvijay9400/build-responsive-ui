@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const BannerSlider = ({ images }) => {
+const BannerSlider = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
+    setCurrentIndex((currentIndex + 1) % data.length);
   };
 
   useEffect(() => {
@@ -13,15 +13,28 @@ const BannerSlider = ({ images }) => {
   }, [currentIndex]);
 
   return (
-    <div className="banner-slider">
-      {images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Slide ${index}`}
-          className={index === currentIndex ? "active" : ""}
-        />
-      ))}
+    <div className="container banner-slider">
+      <div className="row">
+        <div className="col-6 position-relative info h-100">
+        {data.map((item, index) => (
+            <div key={index} className={index === currentIndex ? "active" : ""}>
+              <h5 className="text-primary">{item.subTitle}</h5>
+              <h1 className="display-4 fw-bold pb-3">{item.title}</h1>
+              <button type="button" className="btn btn-outline-primary btn-lg">View More</button>
+            </div>
+          ))}
+        </div>
+        <div className="col-6 position-relative h-100">
+          {data.map((item, index) => (
+            <img
+              key={index}
+              src={item.img}
+              alt={`Slide ${index}`}
+              className={index === currentIndex ? "active" : ""}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
