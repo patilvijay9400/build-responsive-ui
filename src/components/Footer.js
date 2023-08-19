@@ -23,7 +23,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <ul className="d-flex gap-1 gap-md-3  list-unstyled mb-0">
+            <ul className="d-flex gap-1 gap-md-3 list-unstyled mb-0">
               <li>
                 <a href="#">
                   <i class="bx bxl-behance text-white"></i>
