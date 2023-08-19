@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import MapModal from "./MapModal";
+import Login from "./Login";
 
 const Header = () => {
   const [mapOpen, setMapOpen] = useState(false);
   const [mapContent, setMapContent] = useState("");
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const openMap = (content) => {
     setMapOpen(true);
     setMapContent(content);
+  };
+
+  const openLogin = (content) => {
+    setLoginOpen(true);
+  };
+
+  const closeMap = () => {
+    setMapOpen(false);
+    setMapContent("");
   };
 
   return (
@@ -28,7 +39,11 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 ms-md-4 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active text-white" aria-current="page" href="#">
+              <a
+                className="nav-link active text-white"
+                aria-current="page"
+                href="#"
+              >
                 Home
               </a>
             </li>
@@ -49,15 +64,24 @@ const Header = () => {
             </li>
           </ul>
           <div class="d-flex sign-btns">
-            <button type="button" className="px-4 py-2 btn btn-outline-light rounded-left">
-              Sign In
+            <button
+              type="button"
+              className="px-3 py-2 btn btn-outline-light"
+              onClick={() => openLogin("map Content")}
+            >
+              Sign In / Sign Up
             </button>
-            <button type="button" className="px-4 py-2 btn btn-outline-light rounded-right ms-1">
-              Sign Up
+            <button
+              className="btn primary-bg text-white py-2 ms-1 ms-md-3"
+              onClick={() => openMap("map Content")}
+            >
+              <i class="bx bx-current-location"></i>
             </button>
-            <button className="btn primary-bg text-white py-2 ms-1 ms-md-3" onClick={() => openMap("map Content")}><i class='bx bx-current-location'></i></button>
           </div>
-          <MapModal mapOpens={mapOpen}>{mapContent}</MapModal>
+          <MapModal mapOpens={mapOpen} closeMap={closeMap}>
+            {mapContent}
+          </MapModal>
+          <Login isLogin={loginOpen} setLoginOpen={setLoginOpen} />
         </div>
       </div>
     </nav>
