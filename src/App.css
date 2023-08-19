@@ -118,9 +118,17 @@
     width: 95%;
     height: 90vh;
   }
+  .btn-lg {
+    padding: 0.4rem;
+    font-size: 14px;
+  }
 }
 
 .btn.active {
   background-color: #5575ef;
   color: #fff;
+}
+
+.h-40vh {
+  height: 50vh;
 }

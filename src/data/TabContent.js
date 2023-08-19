@@ -106,9 +106,9 @@ export const TabContent = {
   ),
   Video: (
     <iframe
-      className="w-100 video-content"
-      src="https://www.youtube.com/embed/hrHIzqyq06U?autoplay=1&controls=0"
-      title="video player"
+      className="w-100 h-40vh"
+      src="https://www.youtube.com/embed/CTgIOft0-TU?autoplay=1&controls=0"
+      title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen

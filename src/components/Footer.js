@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col d-flex justify-content-between">
-            <ul className="d-flex gap-2 gap-md-4 list-unstyled mb-0">
+            <ul className="d-md-flex gap-2 gap-md-4 list-unstyled mb-0">
               <li>
                 <a href="#" className="text-white text-decoration-none">
                   Privacy Policy
@@ -25,16 +25,24 @@ const Footer = () => {
             </ul>
             <ul className="d-flex gap-1 gap-md-3 list-unstyled mb-0">
               <li>
-                <a href="#"><i class='bx bxl-behance text-white' ></i></a>
+                <a href="#">
+                  <i class="bx bxl-behance text-white"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class='bx bxl-facebook text-white'></i></a>
+                <a href="#">
+                  <i class="bx bxl-facebook text-white"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class='bx bxl-twitter text-white'></i></a>
+                <a href="#">
+                  <i class="bx bxl-twitter text-white"></i>
+                </a>
               </li>
               <li>
-                <a href="#"><i class='bx bxl-instagram text-white' ></i></a>
+                <a href="#">
+                  <i class="bx bxl-instagram text-white"></i>
+                </a>
               </li>
             </ul>
           </div>

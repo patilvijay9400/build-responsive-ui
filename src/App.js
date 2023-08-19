@@ -9,7 +9,6 @@ import { BannerData } from "./data/BannerData";
 import { TabContent } from "./data/TabContent";
 
 function App() {
-
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
 
@@ -35,7 +34,7 @@ function App() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/SqcY0GlETPk"
+              src="https://www.youtube.com/embed/t3yELjsPv7s"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -46,7 +45,7 @@ function App() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/P43DW3HUUH8"
+              src="https://www.youtube.com/embed/fveG0wYuWGk"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
